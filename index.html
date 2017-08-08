@@ -42,7 +42,7 @@
       <center>
         <!-- Input field -->
         <form>
-          <p> Eigenschap sterkte: </p> <br>
+          <p> Eigenschap sterkte: </p>
           <input type="number" id="sterkte"> <br>
           <button id="roll">Dobbel!</button> <br>
         </form>
@@ -57,7 +57,7 @@
       $("#roll").on('click', function() {
         var n = document.getElementById('sterkte').value;
         var result = 0;
-        $('#rollvalue').val($('#rollvalue').val() + String(result));
+        $('#rollvalue').val($('#rollvalue').val() + "more text");
       });
     });
   </script>
