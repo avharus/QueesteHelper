@@ -44,11 +44,11 @@
         <form>
           <p> Eigenschap sterkte: </p> <br>
           <input type="number" id="sterkte"> <br>
-          <button id="roll">Roll!</button> <br>
+          <button id="roll">Dobbel!</button> <br>
         </form>
 
         <!-- Output field -->
-        <p id="rollvalue"> Gerold: </p>
+        <p id="rollvalue"> Gedobbeld: </p>
       </center>
   </body>
 
@@ -57,7 +57,7 @@
       $("#roll").on('click', function() {
         var n = document.getElementById('sterkte').value;
         var result = 0;
-        $('#rollvalue').val($('#rollvalue').val() + 'result')
+        $('#rollvalue').val($('#rollvalue').val() + result)
       })
     })
   </script>
