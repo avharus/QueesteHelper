@@ -40,24 +40,24 @@
       </div>
 
       <center>
+        <!-- Input field -->
         <form>
-          Eigenschap sterkte: <br>
-          <input type="number" id="sterkte"> <br><br>
-          <button id="roll">Roll!</button>
+          <p> Eigenschap sterkte: </p> <br>
+          <input type="number" id="sterkte"> <br>
+          <button id="roll">Roll!</button> <br>
         </form>
 
         <!-- Output field -->
-        <div class="row">
-          <!-- Output field -->
-        </div>
+        <p id="rollvalue"> Gerold: </p>
       </center>
   </body>
 
   <script>
     $("document").ready(function() {
-      $("roll").on('click', function() {
+      $("#roll").on('click', function() {
         var n = document.getElementById('sterkte').value;
-        
+        var result = 0;
+        $('#rollvalue').val($('#rollvalue').val() + 'result')
       })
     })
   </script>
