@@ -40,10 +40,10 @@
       </div>
 
       <center>
-        <form action="/main.js">
+        <form>
           Eigenschap sterkte: <br>
-          <input type="number"> <br>
-          <input type="submit" value="Submit"> <br><br>
+          <input type="number" id="sterkte"> <br><br>
+          <button id="roll">Roll!</button>
         </form>
 
         <!-- Output field -->
@@ -52,4 +52,13 @@
         </div>
       </center>
   </body>
+
+  <script>
+    $("document").ready(function() {
+      $("roll").on('click', function() {
+        var n = document.getElementById('sterkte').value;
+        
+      })
+    })
+  </script>
 </html>
