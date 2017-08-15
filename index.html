@@ -6,6 +6,14 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   </head>
 
+  <script type="text/javascript">
+    function dobbelen() {
+      var sterkte = document.eigenschap.sterkte.value;
+      var dobbelwaarde = 0;
+      document.getElementById('dobbelwaarde').append(dobbelwaarde);
+    }
+  </script>
+
   <style>
     body {
       font-size: 100%;
@@ -39,10 +47,10 @@
 
       <center>
         <!-- Input field -->
-        <form>
+        <form name="eigenschap">
           <p> Eigenschap sterkte: </p>
-          <input type="number" id="sterkte"> <br><br>
-          <button id="roll">Dobbel!</button> <br><br>
+          <input type="number" name="sterkte"> <br><br>
+          <input type="button" id="roll" value="Dobbel!" onClick="dobbelen()"/> <br><br>
         </form>
 
         <!-- Output field -->
@@ -52,5 +60,5 @@
   </body>
 
   <script type="text/javascript" src="main.js"></script>
-  
+
 </html>
