@@ -8,9 +8,21 @@
 
   <script type="text/javascript">
     function dobbelen() {
-      var sterkte = document.eigenschap.sterkte.value;
-      var dobbelwaarde = 0;
-      document.getElementById('dobbelwaarde').append(dobbelwaarde);
+      var munten = document.eigenschap.sterkte.value; // Aantal munten
+      var muntwaarde = 0; // Initialize at zero
+      var dobbelwaarde = math.round(math.random(0.5, 6.49)); // Dobbelsteen
+      if (munten > 0) {
+        for (int i = 0; i < munten; i++) {
+          muntwaarde = muntwaarde + Math.round(Math.random(1)); // Waarde van elke munt wordt opgeteld
+        }
+      }
+      if (munten < 0) {
+        for (int i = 0; i > munten; i--) {
+          muntwaarde = muntwaarde + Math.round(Math.random(1)); // Waarde van elke munt wordt afgetrokken
+        }
+      }
+      var dobbelscore = dobbelwaarde + muntwaarde;
+      document.getElementById('dobbelscore').append(dobbelscore);
     }
   </script>
 
@@ -22,19 +34,19 @@
 
     @media only screen and (max-width: 400px) {
       body {
-        font-size:250%;
+        font-size: 250%;
       }
     }
 
     @media only screen and (max-width: 800px) {
       body {
-        font-size:250%;
+        font-size: 250%;
       }
     }
 
     @media only screen and (max-width: 1100px) {
       body {
-        font-size:200%;
+        font-size: 200%;
       }
     }
   </style>
@@ -49,16 +61,14 @@
         <!-- Input field -->
         <form name="eigenschap">
           <p> Eigenschap sterkte: </p>
-          <input type="number" name="sterkte"> <br><br>
+          <input type="number" name="sterkte"/> <br><br>
           <input type="button" id="roll" value="Dobbel!" onClick="dobbelen()"/> <br><br>
         </form>
 
         <!-- Output field -->
         <p> Gedobbeld: </p>
-        <p id="dobbelwaarde"> </p>
+        <p id="dobbelscore"> </p>
       </center>
   </body>
-
-  <script type="text/javascript" src="main.js"></script>
 
 </html>
