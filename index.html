@@ -10,19 +10,21 @@
     function dobbelen() {
       var munten = document.eigenschap.sterkte.value; // Aantal munten
       var muntwaarde = 0; // Initialize at zero
-      var dobbelwaarde = math.round(math.random(0.5, 6.49)); // Dobbelsteen
       if (munten > 0) {
-        for (int i = 0; i < munten; i++) {
-          muntwaarde = muntwaarde + Math.round(Math.random(1)); // Waarde van elke munt wordt opgeteld
+        while (munten != 0) {
+          muntwaarde = muntwaarde + Math.round(Math.random()); // Waarde van elke munt wordt opgeteld
+          munten--;
         }
       }
       if (munten < 0) {
-        for (int i = 0; i > munten; i--) {
-          muntwaarde = muntwaarde + Math.round(Math.random(1)); // Waarde van elke munt wordt afgetrokken
+        while (munten != 0) {
+          muntwaarde = muntwaarde - Math.round(Math.random()); // Waarde van elke munt wordt afgetrokken
+          munten++;
         }
       }
-      var dobbelscore = dobbelwaarde + muntwaarde;
-      document.getElementById('dobbelscore').append(dobbelscore);
+      var dobbelwaarde = Math.floor((Math.random() * 6) + 1); // Dobbelsteen
+      var dobbelscore = muntwaarde + dobbelwaarde;
+      document.getElementById('dobbelscore').innerHTML = dobbelscore;
     }
   </script>
 
