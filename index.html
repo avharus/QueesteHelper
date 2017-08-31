@@ -30,23 +30,23 @@
 
   <style>
     body {
-      font-size: 100%;
+      font-size: 160%;
       line-height: 1.6875;
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 500px) {
+      body {
+        font-size: 300%;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
       body {
         font-size: 250%;
       }
     }
 
-    @media only screen and (max-width: 800px) {
-      body {
-        font-size: 250%;
-      }
-    }
-
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1300px) {
       body {
         font-size: 200%;
       }
@@ -69,7 +69,11 @@
 
         <!-- Output field -->
         <p> Gedobbeld: </p>
-        <p id="dobbelscore"> </p>
+        <p id="dobbelscore"> </p> <br><br>
+
+        <footer>
+          <p> © Wouter Leeuw </p>
+        </footer>
       </center>
   </body>
 
