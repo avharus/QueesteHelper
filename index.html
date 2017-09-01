@@ -11,13 +11,13 @@
       var munten = document.eigenschap.sterkte.value; // Aantal munten
       var muntwaarde = 0; // Initialize at zero
       if (munten > 0) {
-        while (munten != 0) {
+        while (munten > 0) {
           muntwaarde = muntwaarde + Math.round(Math.random()); // Waarde van elke munt wordt opgeteld
           munten--;
         }
       }
       if (munten < 0) {
-        while (munten != 0) {
+        while (munten < 0) {
           muntwaarde = muntwaarde - Math.round(Math.random()); // Waarde van elke munt wordt afgetrokken
           munten++;
         }
